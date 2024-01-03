@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/thomas/data/zenzoe/devel_segmentwise_msm/pulled_configs/etc'
+let g:netrw_dirhist_7='/home/thomas/data/zenzoe/devel_segmentwise_msm/pulled_configs/etc/sevensense/kaki/kaki_app'
+let g:netrw_dirhist_6='/home/thomas/data/zenzoe/devel_segmentwise_msm/pulled_configs/etc/sevensense/kaki'
+let g:netrw_dirhist_5='/home/thomas/data/zenzoe/devel_segmentwise_msm/pulled_configs/etc/sevensense'
+let g:netrw_dirhist_4='/home/thomas/data/zenzoe/devel_segmentwise_msm/pulled_configs/etc/sevensense/ifm_interface'
+let g:netrw_dirhist_3='/home/thomas/data/zenzoe/devel_segmentwise_msm/pulled_configs/etc/sevensense'
+let g:netrw_dirhist_2='/home/thomas/data/zenzoe/devel_segmentwise_msm/pulled_configs/etc'
+let g:netrw_dirhist_1='/home/thomas/data/zenzoe/devel_segmentwise_msm/pulled_configs'
+let g:netrw_dirhist_0='/home/thomas/data/zenzoe/devel_segmentwise_msm/pulled_configs/home'
+let g:netrw_dirhist_9='/home/thomas/data/zenzoe/devel_segmentwise_msm/pulled_configs/home/sevensense'
