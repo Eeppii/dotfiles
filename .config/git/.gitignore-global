@@ -1,0 +1,88 @@
+# Compiled Object files.
+*.slo
+*.lo
+*.o
+*.obj
+
+# Compiled Dynamic libraries.
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries.
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Compiled python.
+tools/lint/autolintc
+*.pyc
+*.mypy_cache*
+
+# CLion
+.idea
+cmake-build-debug
+
+# Vim.
+Session.vim
+.ccls
+
+# not for git files
+*.mat
+*.csv
+*.asv
+*.jpg
+
+# MacOS Desktop Services Store.
+.DS_Store
+
+#py
+.mypy_cache
+
+# Temporary editor files
+*~
+*.orig
+*.swp
+*.swo
+*.swn
+*.swm
+
+# Eclipse.
+.pydevproject
+.project
+.cproject
+.settings
+CATKIN_IGNORE
+
+# QtCreator
+CMakeLists.txt.user
+
+# Multiagent-mapping temporary files.
+.vi_command_history
+mapapi-discovery.txt
+
+# R history files
+.Rhistory
+
+# wstools
+.rosinstall
+
+# ros_lib
+wetrok_ui/firmware/libraries/ros_lib
+
+# VS Code
+.vscode
+
+# Jupyter
+.ipynb_checkpoints
+
+# clangd
+*compile_commands.json
+*.idx
+
