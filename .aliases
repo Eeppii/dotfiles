@@ -1,0 +1,104 @@
+alias cl='clear'
+alias scpr='scp -r'
+alias clip='xclip -sel clip'
+alias rsyncp='rsync -avh --info=progress2'
+alias ipa='ip -c a'
+
+# git
+alias git_tree='git log --graph --pretty=oneline --abbrev-commit'
+alias gpl='git pull -t;'
+alias gf='git fetch'
+alias gp='git push'
+alias ga='git add -u'
+alias gamend='git commit --amend'
+alias gpm='git switch master; git pull -t; git switch -'
+alias mgits='mgit . --show'
+alias gpnb='git rev-parse --abbrev-ref HEAD | xargs -I {} git push --set-upstream origin {}'
+alias gcp='git cherry-pick'
+alias gpf='git push --force-with-lease'
+alias gsm='git switch master'
+alias gds='git diff --stat'
+alias gstash='git stash -k -u'
+alias gpop='git stash pop'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# 7s PER development
+alias dev_go='. ~/catkin_ws/devel/setup.sh; cd ~/catkin_ws/src;'
+alias nav_code='code /home/thomas/ide_ws/nav.code-workspace && exit'
+alias nav_go='. ~/catkin_ws/devel/setup.sh; cd ~/catkin_ws/src/sevensense_navigation;'
+alias conf_go='cd ~/clonestuff/7s_configuration;'
+alias clo_go='cd ~/clonestuff;'
+alias cali_go='cd ~/clonestuff/7s_robot_calibrations;'
+alias proc_go='. ~/catkin_ws/devel/setup.sh; cd ~/catkin_ws/src/7s_image_processing;'
+alias img_go='. ~/catkin_ws/devel/setup.sh; cd ~/catkin_ws/src/7s_image_definitions;'
+alias cb='catkin build'
+alias ct='catkin test'
+alias cbt='catkin build --catkin-make-args all tests -- '
+alias cbtnd='catkin build --no-deps --catkin-make-args all tests -- '
+alias cbcc='catkin build --profile code_completion'
+alias cbsw='catkin build --catkin-make-args all tests -- --start-with'
+alias cbnd='catkin build --no-deps -- '
+alias rust_code='code /home/thomas/ide_ws/rust.code-workspace && exit'
+alias spell_check='cspell lint --no-progress --reporter default'
+
+# 7s LOC devel
+alias atl_code='code /home/thomas/ide_ws/atlas.code-workspace && exit'
+alias atl_go='. ~/atlas_ws/devel/setup.sh; cd ~/atlas_ws/src/atlas;'
+alias ac='rosrun atlas_console atlas_console'
+alias map_app_dev='rosrun mapping_app mapping_app_dev.py'
+
+# Debugging
+alias vtune_go='source /opt/intel/oneapi/vtune/latest/amplxe-vars.sh; echo "use vtune-gui?"'
+alias vtune_command='echo "vtune -collect hotspots roslaunch <arguments>"'
+alias config_vtune_activate='catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-fdiagnostics-color -g -fno-omit-frame-pointer" -DENABLE_TIMING=1 -DENABLE_STATISTICS=1 -O2'
+alias core_dumps_activate='echo "the core dump files will be created in the directory you run the process from"; ulimit -c unlimited; sudo bash -c "echo 1 > /proc/sys/kernel/core_uses_pid";'
+
+# rbb
+alias rbb_code='code /home/thomas/ide_ws/rbb.code-workspace && exit'
+alias rbb_go='. ~/rbb_ws/devel/setup.sh; cd ~/rbb_ws/src'
+alias config_rbb_activate='catkin config --cmake-args -DPROTOBUF_COMPILE_PYTHON=True -DCMAKE_BUILD_TYPE=Release -DENABLE_DATA_COLLECTOR=1 -DENABLE_STATISTICS=1 -DENABLE_TIMING=1'
+
+# 7s apt packages
+alias list_7s_apt_packages='grep ^Package /var/lib/apt/lists/devel.deb.7sr.ch_testing_dists_focal_main_binary-amd64_Packages | awk "{print $2}" | sort -u'
+
+# apt
+alias up_go='sudo apt update && sudo apt -y upgrade; exit'
+alias up_and_off='sudo apt update && sudo apt -y upgrade; poweroff'
+
+# wtf
+alias wtf_codecompletion='echo "handle-symlinks-for-clangd-code-completion --action update --workspace-dir ~/catkin_ws --catkin-profile code_completion"'
+alias wtf_grep='echo "grep pattern -rn /path"'
+alias wtf_find='echo "find /path -name pattern 2>/dev/null"'
+alias wtf_test='echo "--catkin-make-args tests"'
+alias wtf_zip='echo "tar -xvz -f archive.tar.gz -C /location"'
+alias wtf_machine_class='echo "/usr/local/etc/sevensense/machine_classes.list"'
+
+# catkin
+alias create_test_catkin_ws='cd; mkdir test_catkin_ws; cd test_catkin_ws; mkdir src; catkin init; catkin config --merge-devel; catkin config --extend /opt/ros/noetic; catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release;'
+
+# ls
+#alias l='ls -ltrAh'
+# exa, a better ls
+alias ls='exa --icons --git -lagh@'
+alias lt='exa --icons --git -lagh@TL 3'
+alias lsn='ls --sort newest'
+alias lss='ls --sort size'
+
+# cat
+alias cat='batcat'
+alias cats='batcat --style plain --paging=never'
+
+# journal
+alias journal='journalctl -xefa'
+
+# 7s-wakeup inverse
+alias suspend_go='systemctl suspend && exit'
+
+# 7s tools
+alias 7s_hyper='. <(curl https://7si.sh)'
+
+# python
+alias ipython='python -m IPython'
+
+# add aliases
+alias add_alias='vim /home/thomas/.aliases'
