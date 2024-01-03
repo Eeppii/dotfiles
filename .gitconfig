@@ -1,0 +1,18 @@
+[user]
+	name = Thomas Eppenberger
+	email = thomas.eppenberger@sevensense.ch
+
+[Alias]
+     mylg = log --graph --pretty=format:'%C(white)%h%Creset %ad %C(green)<%s>%Creset %C(bold yellow)%d%Creset' --date=short --author=Thomas
+     myhist = log --graph --full-history --all --pretty=format:'%C(white)%h%Creset %ad %C(green)<%s>%Creset %C(bold yellow)%d%Creset' --date=short --author=Thomas
+	lg = log --graph --pretty=format:'%C(white)%h%Creset %ad %C(green)<%s>%Creset %C(bold yellow)%d%Creset %C(blue)<%an>%Creset' --date=short
+     hist = log --graph --full-history --all --pretty=format:'%C(white)%h%Creset %ad %C(green)<%s>%Creset %C(bold yellow)%d%Creset %C(blue)<%an>%Creset' --date=short
+     tree = log --graph --pretty=oneline --abbrev-commit
+     
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[core]
+	excludesFile = /home/thomas/.config/git/.gitignore-global
