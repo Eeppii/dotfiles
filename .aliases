@@ -22,6 +22,9 @@ alias gstash='git stash -k -u'
 alias gpop='git stash pop'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
+# gitui
+alias gitui='gitui -t macchiato.ron'
+
 # 7s PER development
 alias dev_go='. ~/catkin_ws/devel/setup.sh; cd ~/catkin_ws/src;'
 alias nav_code='code /home/thomas/ide_ws/nav.code-workspace && exit'
