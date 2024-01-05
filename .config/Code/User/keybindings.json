@@ -53,13 +53,18 @@
         "command": "-workbench.action.moveEditorToPreviousGroup"
     },
     {
-        "key": "ctrl+u",
+        "key": "alt+k",
         "command": "cursorPageUp",
         "when": "editorFocus"
     },
     {
-        "key": "ctrl+d",
+        "key": "alt+j",
         "command": "cursorPageDown",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
         "when": "editorFocus"
     }
 ]
