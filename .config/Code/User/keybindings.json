@@ -75,5 +75,10 @@
         "key": "alt+j",
         "command": "search.action.focusSearchList",
         "when": "searchViewletFocus"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-vscode-neovim.ctrl-b",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal.b && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
     }
 ]
