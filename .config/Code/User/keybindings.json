@@ -84,5 +84,10 @@
     {
         "key": "ctrl+q",
         "command": "-workbench.action.quit"
+    },
+    {
+        "key": "alt+space",
+        "command": "-workbench.action.terminal.sendSequence",
+        "when": "terminalFocus && terminalShellIntegrationEnabled && !accessibilityModeEnabled && terminalShellType == 'pwsh'"
     }
 ]
