@@ -86,3 +86,6 @@ wetrok_ui/firmware/libraries/ros_lib
 *compile_commands.json
 *.idx
 
+# RBB
+tmp/*
+output/*
