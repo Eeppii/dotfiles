@@ -25,4 +25,5 @@ family = "Iosevka Nerd Font"
 style = "Regular"
 
 [window]
-opacity = 0.7
+opacity = 0.85
+decorations = "None"
