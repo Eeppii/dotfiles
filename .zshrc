@@ -131,8 +131,6 @@ export PATH="$PATH:/home/thomas/.yarn/bin"
 # no rm -rf *
 export HISTORY_IGNORE="rm -rf*:rm \*"
 
-#ros
-source /opt/ros/noetic/setup.zsh
 
 # for broot
 export EDITOR="/usr/bin/vim"
