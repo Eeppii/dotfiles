@@ -83,3 +83,6 @@ alias add_alias='vim /home/thomas/.aliases'
 
 # tmux
 alias ta='tmux attach'
+
+# Threema
+alias threema='flatpak run ch.threema.threema-desktop'
