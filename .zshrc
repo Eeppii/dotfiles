@@ -136,6 +136,7 @@ source /opt/ros/noetic/setup.zsh
 
 # for broot
 export EDITOR="/usr/bin/vim"
+export VISUAL="/usr/bin/vim"
 
 # for autosuggestions plugin: remap to alt+space
 bindkey '\e ' autosuggest-accept
