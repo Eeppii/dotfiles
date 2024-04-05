@@ -26,14 +26,14 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias gitui='gitui -t macchiato.ron'
 
 # 7s PER development
-alias dev_go='. ~/catkin_ws/devel/setup.sh; cd ~/catkin_ws/src;'
+alias dev_go='. ~/catkin_ws/devel/setup.zsh; cd ~/catkin_ws/src;'
 alias nav_code='code /home/thomas/ide_ws/nav.code-workspace && exit'
-alias nav_go='. ~/catkin_ws/devel/setup.sh; cd ~/catkin_ws/src/sevensense_navigation;'
+alias nav_go='. ~/catkin_ws/devel/setup.zsh; cd ~/catkin_ws/src/sevensense_navigation;'
 alias conf_go='cd ~/clonestuff/7s_configuration;'
 alias clo_go='cd ~/clonestuff;'
 alias cali_go='cd ~/clonestuff/7s_robot_calibrations;'
-alias proc_go='. ~/catkin_ws/devel/setup.sh; cd ~/catkin_ws/src/7s_image_processing;'
-alias img_go='. ~/catkin_ws/devel/setup.sh; cd ~/catkin_ws/src/7s_image_definitions;'
+alias proc_go='. ~/catkin_ws/devel/setup.zsh; cd ~/catkin_ws/src/7s_image_processing;'
+alias img_go='. ~/catkin_ws/devel/setup.zsh; cd ~/catkin_ws/src/7s_image_definitions;'
 alias cb='catkin build'
 alias ct='catkin test'
 alias cbt='catkin build --catkin-make-args all tests -- '
@@ -46,7 +46,7 @@ alias spell_check='cspell lint --no-progress --reporter default'
 
 # 7s LOC devel
 alias atl_code='code /home/thomas/ide_ws/atlas.code-workspace && exit'
-alias atl_go='. ~/atlas_ws/devel/setup.sh; cd ~/atlas_ws/src/atlas;'
+alias atl_go='. ~/atlas_ws/devel/setup.zsh; cd ~/atlas_ws/src/atlas;'
 alias ac='rosrun atlas_console atlas_console'
 alias map_app_dev='rosrun mapping_app mapping_app_dev.py'
 
@@ -58,7 +58,7 @@ alias core_dumps_activate='echo "the core dump files will be created in the dire
 
 # rbb
 alias rbb_code='code /home/thomas/ide_ws/rbb.code-workspace && exit'
-alias rbb_go='. ~/rbb_ws/devel/setup.sh; cd ~/rbb_ws/src'
+alias rbb_go='. ~/rbb_ws/devel/setup.zsh; cd ~/rbb_ws/src'
 alias config_rbb_activate='catkin config --cmake-args -DPROTOBUF_COMPILE_PYTHON=True -DCMAKE_BUILD_TYPE=Release -DENABLE_DATA_COLLECTOR=1 -DENABLE_STATISTICS=1 -DENABLE_TIMING=1'
 
 # 7s apt packages
@@ -75,6 +75,7 @@ alias wtf_find='echo "find /path -name pattern 2>/dev/null"'
 alias wtf_test='echo "--catkin-make-args tests"'
 alias wtf_zip='echo "tar -xvz -f archive.tar.gz -C /location"'
 alias wtf_machine_class='echo "/usr/local/etc/sevensense/machine_classes.list"'
+alias wtf_cspell='echo "cspell lint --no-progress /path/to/directory"'
 
 # catkin
 alias create_test_catkin_ws='cd; mkdir test_catkin_ws; cd test_catkin_ws; mkdir src; catkin init; catkin config --merge-devel; catkin config --extend /opt/ros/noetic; catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release;'
