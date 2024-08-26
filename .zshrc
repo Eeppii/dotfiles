@@ -128,8 +128,19 @@ export PATH="/home/thomas/.cargo/bin:$PATH"
 # yarn
 export PATH="$PATH:/home/thomas/.yarn/bin"
 
-# no rm -rf *
+# history
+# https://martinheinz.dev/blog/110
 export HISTORY_IGNORE="rm -rf*:rm \*"
+setopt INC_APPEND_HISTORY   
+setopt SHARE_HISTORY        
+setopt HIST_IGNORE_DUPS     
+setopt HIST_IGNORE_ALL_DUPS 
+setopt HIST_SAVE_NO_DUPS    
+setopt HIST_IGNORE_SPACE    
+setopt HIST_VERIFY          
+setopt APPEND_HISTORY       
+setopt HIST_NO_STORE        
+setopt HIST_REDUCE_BLANKS 
 
 #ros
 source /opt/ros/noetic/setup.zsh
