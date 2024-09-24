@@ -129,7 +129,10 @@ export PATH="$PATH:/home/thomas/.yarn/bin"
 
 # history
 # https://martinheinz.dev/blog/110
-export HISTORY_IGNORE="rm -rf*:rm \*"
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000000
+SAVEHIST=10000000
+HISTORY_IGNORE="(ls|pwd|exit|rm -rf|rm -f|sudo rm)*"
 setopt INC_APPEND_HISTORY   
 setopt SHARE_HISTORY        
 setopt HIST_IGNORE_DUPS     
