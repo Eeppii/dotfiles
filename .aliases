@@ -111,3 +111,5 @@ alias add_alias='vim /home/thomas/.aliases'
 # tmux
 alias ta='tmux attach'
 alias mux='tmuxinator'
+alias ts='tmux new -s tmp'
+
