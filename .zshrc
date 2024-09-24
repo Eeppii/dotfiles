@@ -80,7 +80,6 @@ plugins=(
     copypath
     copyfile
     copybuffer
-    history
     thomas_fcts
     zsh-fzf-history-search
 )
