@@ -79,7 +79,7 @@ alias wtf_machine_class='echo "/usr/local/etc/sevensense/machine_classes.list"'
 alias wtf_cspell='echo "cspell lint --no-progress --show-context /path/to/directory"'
 
 # catkin
-alias create_test_catkin_ws='cd; mkdir test_catkin_ws; cd test_catkin_ws; mkdir src; catkin init; catkin config --merge-devel; catkin config --extend /opt/ros/noetic; catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release;'
+alias create_test_catkin_ws='cd; mkdir test_catkin_ws; cd test_catkin_ws; mkdir src; catkin init; catkin config --merge-devel; catkin config --extend /opt/ros/noetic; nav-catkin setup-profiles;'
 
 # ls
 #alias l='ls -ltrAh'
