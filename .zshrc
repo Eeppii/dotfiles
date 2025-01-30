@@ -11,7 +11,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="gnzh"
 
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -27,7 +26,7 @@ ZSH_THEME="gnzh"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -73,15 +72,15 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
-    zsh-autosuggestions
-    sudo
-    web-search
-    copypath
-    copyfile
-    copybuffer
-    thomas_fcts
-    zsh-fzf-history-search
+  git
+  zsh-autosuggestions
+  sudo
+  web-search
+  copypath
+  copyfile
+  copybuffer
+  thomas_fcts
+  zsh-fzf-history-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -133,19 +132,33 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000000
 SAVEHIST=10000000
 HISTORY_IGNORE="(ls|pwd|exit|rm -rf|rm -f|sudo rm)*"
-setopt INC_APPEND_HISTORY   
-setopt SHARE_HISTORY        
-setopt HIST_IGNORE_DUPS     
-setopt HIST_IGNORE_ALL_DUPS 
-setopt HIST_SAVE_NO_DUPS    
-setopt HIST_IGNORE_SPACE    
-setopt HIST_VERIFY          
-setopt APPEND_HISTORY       
-setopt HIST_NO_STORE        
-setopt HIST_REDUCE_BLANKS 
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_VERIFY
+setopt APPEND_HISTORY
+setopt HIST_NO_STORE
+setopt HIST_REDUCE_BLANKS
 
 #ros
-source /opt/ros/noetic/setup.zsh
+# Check if Noetic ROS is installed
+if [[ -f /opt/ros/noetic/setup.zsh ]]; then
+  source /opt/ros/noetic/setup.zsh
+# Otherwise, check for Humble ROS
+elif [[ -f /opt/ros/humble/setup.zsh ]]; then
+  source /opt/ros/humble/setup.zsh
+  # for colcon_cd
+  source /usr/share/colcon_cd/function/colcon_cd.sh
+  export _colcon_cd_root=/opt/ros/humble/
+  # argcomplete for ros2 & colcon
+  eval "$(/usr/bin/register-python-argcomplete3 ros2)"
+  eval "$(/usr/bin/register-python-argcomplete3 colcon)"
+else
+  echo "Neither Noetic nor Humble ROS is installed."
+fi
 
 # for broot
 export EDITOR="/usr/bin/vim"
@@ -153,3 +166,11 @@ export VISUAL="/usr/bin/vim"
 
 # for autosuggestions plugin: remap to alt+space
 bindkey '\e ' autosuggest-accept
+
+# for fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# seek a better place for this.
+export TERM=xterm-256color
+
+export PATH="$PATH:/home/thomas/.local/bin"
