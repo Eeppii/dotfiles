@@ -5,4 +5,4 @@ vim.keymap.set("i", "jk", "<Esc>l")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- A for live_grep_Arguments
-vim.keymap.set("n", "<leader>sA", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+-- vim.keymap.set("n", "<leader>sA", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
