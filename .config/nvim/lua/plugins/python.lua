@@ -5,14 +5,6 @@ return {
       table.insert(opts.ensure_installed, "yapf")
     end,
   },
-  -- below code might not be needed anymore.
-  -- {
-  --   "nvimtools/none-ls.nvim",
-  --   opts = function(_, opts)
-  --     local nls = require("null-ls")
-  --     table.insert(opts.sources, nls.builtins.formatting.yapf)
-  --   end,
-  -- },
   {
     "stevearc/conform.nvim",
     optional = true,
