@@ -1,3 +1,6 @@
+# time the all modules
+# zmodload zsh/zprof
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -143,23 +146,6 @@ setopt APPEND_HISTORY
 setopt HIST_NO_STORE
 setopt HIST_REDUCE_BLANKS
 
-#ros
-# Check if Noetic ROS is installed
-if [[ -f /opt/ros/noetic/setup.zsh ]]; then
-  source /opt/ros/noetic/setup.zsh
-# Otherwise, check for Humble ROS
-elif [[ -f /opt/ros/humble/setup.zsh ]]; then
-  source /opt/ros/humble/setup.zsh
-  # for colcon_cd
-  source /usr/share/colcon_cd/function/colcon_cd.sh
-  export _colcon_cd_root=/opt/ros/humble/
-  # argcomplete for ros2 & colcon
-  eval "$(/usr/bin/register-python-argcomplete3 ros2)"
-  eval "$(/usr/bin/register-python-argcomplete3 colcon)"
-else
-  echo "Neither Noetic nor Humble ROS is installed."
-fi
-
 # for broot
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
@@ -171,6 +157,12 @@ bindkey '\e ' autosuggest-accept
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # seek a better place for this.
-export TERM=xterm-256color
+# export TERM=xterm-256color
+
+# ccache
+export PATH="/usr/lib/ccache:$PATH"
 
 export PATH="$PATH:/home/thomas/.local/bin"
+
+# time all modules
+# zprof
