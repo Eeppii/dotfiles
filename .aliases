@@ -23,32 +23,15 @@ alias gpop='git stash pop'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias lg='lazygit'
 
-# gitui
-alias gitui='gitui -t macchiato.ron'
-
 # 7s PER development
-alias dev_go='. ~/catkin_ws/devel/setup.zsh; cd ~/catkin_ws/src;'
-alias nav_code='code /home/thomas/ide_ws/nav.code-workspace && exit'
-alias nav_go='. ~/catkin_ws/devel/setup.zsh; cd ~/catkin_ws/src/sevensense_navigation;'
-alias ros2_go='cd ~/ros2_ws/src/sevensense_navigation;'
+alias dev_go='cd ~/ros2_ws/src;'
 alias conf_go='cd ~/clonestuff/7s_configuration;'
 alias clo_go='cd ~/clonestuff;'
-alias cali_go='cd ~/clonestuff/7s_robot_calibrations;'
-alias proc_go='. ~/catkin_ws/devel/setup.zsh; cd ~/catkin_ws/src/7s_image_processing;'
-alias img_go='. ~/catkin_ws/devel/setup.zsh; cd ~/catkin_ws/src/7s_image_definitions;'
-alias cb='catkin build'
-alias ct='catkin test'
-alias cbt='catkin build --catkin-make-args all tests -- '
-alias cbtnd='catkin build --no-deps --catkin-make-args all tests -- '
-alias cbcc='catkin build --profile code_completion'
-alias cbsw='catkin build --catkin-make-args all tests -- --start-with'
-alias cbnd='catkin build --no-deps -- '
-alias rust_code='code /home/thomas/ide_ws/rust.code-workspace && exit'
+alias proc_go='cd ~/ros2_ws/src/7s_image_processing;'
+alias img_go='cd ~/ros2_ws/src/7s_image_definitions;'
 alias spell_check='cspell lint --no-progress --reporter default'
 
 # 7s LOC devel
-alias atl_code='code /home/thomas/ide_ws/atlas.code-workspace && exit'
-alias atl_go='. ~/atlas_ws/devel/setup.zsh; cd ~/atlas_ws/src/atlas;'
 alias ac='rosrun atlas_console atlas_console'
 alias map_app_dev='rosrun mapping_app mapping_app_dev.py'
 
@@ -59,12 +42,7 @@ alias config_vtune_activate='catkin config --cmake-args -DCMAKE_BUILD_TYPE=Relea
 alias core_dumps_activate='echo "the core dump files will be created in the directory you run the process from"; ulimit -c unlimited; sudo bash -c "echo 1 > /proc/sys/kernel/core_uses_pid";'
 
 # rbb
-alias rbb_code='code /home/thomas/ide_ws/rbb.code-workspace && exit'
-alias rbb_go='. ~/rbb_ws/devel/setup.zsh; cd ~/rbb_ws/src'
-alias config_rbb_activate='catkin config --cmake-args -DPROTOBUF_COMPILE_PYTHON=True -DCMAKE_BUILD_TYPE=Release -DENABLE_DATA_COLLECTOR=1 -DENABLE_STATISTICS=1 -DENABLE_TIMING=1'
-
-# 7s apt packages
-alias list_7s_apt_packages='grep ^Package /var/lib/apt/lists/devel.deb.7sr.ch_testing_dists_focal_main_binary-amd64_Packages | awk "{print $2}" | sort -u'
+alias rbb_go='cd ~/rbb2_ws/src'
 
 # apt
 alias up_go='sudo apt update && sudo apt -y upgrade; exit'
@@ -74,14 +52,10 @@ alias up_and_off='sudo apt update && sudo apt -y upgrade; poweroff'
 alias wtf_codecompletion='echo "handle-symlinks-for-clangd-code-completion --action update --workspace-dir ~/catkin_ws --catkin-profile code_completion"'
 alias wtf_grep='echo "grep pattern -rn /path"'
 alias wtf_find='echo "find /path -name pattern 2>/dev/null"'
-alias wtf_test='echo "--catkin-make-args tests"'
 alias wtf_zip='echo "tar -xvz -f archive.tar.gz -C /location"'
 alias wtf_machine_class='echo "/usr/local/etc/sevensense/machine_classes.list"'
 alias wtf_cspell='echo "cspell lint --no-progress --show-context /path/to/directory"'
 alias wtf_include='echo "grep -rh '#include' path/to/my_package | sort -u"'
-
-# catkin
-alias create_test_catkin_ws='cd; mkdir test_catkin_ws; cd test_catkin_ws; mkdir src; catkin init; catkin config --merge-devel; catkin config --extend /opt/ros/noetic; nav-catkin setup-profiles;'
 
 # ls
 #alias l='ls -ltrAh'
@@ -113,5 +87,4 @@ alias add_alias='vim /home/thomas/.aliases'
 # tmux
 alias ta='tmux attach'
 alias mux='tmuxinator'
-alias ts='tmux new'
 
