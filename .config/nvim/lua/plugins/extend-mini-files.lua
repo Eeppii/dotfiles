@@ -1,6 +1,6 @@
 -- Taken from https://lazyvim-ambitious-devs.phillips.codes/course/chapter-5/
 return {
-  "echasnovski/mini.files",
+  "nvim-mini/mini.files",
   keys = {
     {
       "<leader>e",
