@@ -38,7 +38,7 @@ alias map_app_dev='rosrun mapping_app mapping_app_dev.py'
 # Debugging
 alias vtune_go='source /opt/intel/oneapi/vtune/latest/amplxe-vars.sh; echo "use vtune-gui?"'
 alias vtune_command='echo "vtune -collect hotspots roslaunch <arguments>"'
-alias config_vtune_activate='catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-fdiagnostics-color -g -fno-omit-frame-pointer" -DENABLE_TIMING=1 -DENABLE_STATISTICS=1 -O2'
+# alias config_vtune_activate='echo "use -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS='-fdiagnostics-color -g -fno-omit-frame-pointer' -DENABLE_TIMING=1 -DENABLE_STATISTICS=1 -O2"'
 alias core_dumps_activate='echo "the core dump files will be created in the directory you run the process from"; ulimit -c unlimited; sudo bash -c "echo 1 > /proc/sys/kernel/core_uses_pid";'
 
 # rbb
@@ -49,13 +49,14 @@ alias up_go='sudo apt update && sudo apt -y upgrade; exit'
 alias up_and_off='sudo apt update && sudo apt -y upgrade; poweroff'
 
 # wtf
-alias wtf_codecompletion='echo "handle-symlinks-for-clangd-code-completion --action update --workspace-dir ~/catkin_ws --catkin-profile code_completion"'
 alias wtf_grep='echo "grep pattern -rn /path"'
 alias wtf_find='echo "find /path -name pattern 2>/dev/null"'
 alias wtf_zip='echo "tar -xvz -f archive.tar.gz -C /location"'
 alias wtf_machine_class='echo "/usr/local/etc/sevensense/machine_classes.list"'
 alias wtf_cspell='echo "cspell lint --no-progress --show-context /path/to/directory"'
 alias wtf_include='echo "grep -rh '#include' path/to/my_package | sort -u"'
+alias wtf_docker_7s='echo "docker pull docker-registry.7si.ch/sev_dev_testing_jammy_humble:latest"'
+alias wtf_zenoh='echo "7s-dev-message-router <robot>"'
 
 # ls
 #alias l='ls -ltrAh'
