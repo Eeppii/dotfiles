@@ -1,0 +1,13 @@
+return {
+  {
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = {
+      formatters_by_ft = {
+        ["c"] = { "/usr/bin/clang-format" },
+        ["cc"] = { "/usr/bin/clang-format" },
+        ["cpp"] = { "/usr/bin/clang-format" },
+      },
+    },
+  },
+}
