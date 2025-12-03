@@ -10,7 +10,7 @@ fi
 # Prerequisites
 sudo apt-get install ninja-build gettext cmake curl build-essential -y
 
-cd $HOME
+cd /tmp
 
 git clone https://github.com/neovim/neovim
 
@@ -21,3 +21,5 @@ git checkout stable
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 
 sudo make install
+
+cd .. && rm -rf neovim
