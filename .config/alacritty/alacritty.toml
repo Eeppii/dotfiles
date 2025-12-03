@@ -26,6 +26,7 @@ style = "Regular"
 [window]
 opacity = 0.85
 decorations = "None"
+startup_mode = "Maximized"
 
 [general]
 import = ["/home/thomas/.config/alacritty/catppuccin-mocha.toml"]
